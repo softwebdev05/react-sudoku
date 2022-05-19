@@ -1,6 +1,6 @@
-import { GRID, INDEXES, NUMBERS } from 'typings'
+import { GRID, INDEX, NUMBERS } from 'typings'
 interface Input {
-  col: INDEXES
+  col: INDEX
   grid: GRID
   value: NUMBERS
 }
