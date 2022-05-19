@@ -10,7 +10,11 @@ const Grid: FC = () => {
           <Row data-cy="grid-row-container">
             {Children.toArray(
               [...Array(9)].map((_, colIndex) => (
-                <div data-cy="block">{colIndex + 1}</div>
+                <Block
+                  data-cy="block"
+                  colIndex={colIndex}
+                  rowIndex={rowIndex}
+                />
               ))
             )}
           </Row>
