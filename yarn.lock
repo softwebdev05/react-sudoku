@@ -1978,6 +1978,11 @@
   dependencies:
     "@types/react" "*"
 
+"@types/react-hook-mousetrap@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@types/react-hook-mousetrap/-/react-hook-mousetrap-2.0.0.tgz#41f9aaa18b8f6f0323a431aac95b7472e3f20470"
+  integrity sha512-P2ciXdvykHNmvFq595E2ksy+np7bxWDC9BFCamk9r1+c4wa0CT9PjRLicyfiDNkDftnZ6QsdHrH35eXm11+5Vw==
+
 "@types/react-redux@^7.1.24":
   version "7.1.24"
   resolved "https://registry.yarnpkg.com/@types/react-redux/-/react-redux-7.1.24.tgz#6caaff1603aba17b27d20f8ad073e4c077e975c0"
@@ -6071,6 +6076,11 @@ mkdirp@~0.5.1:
   dependencies:
     minimist "^1.2.6"
 
+mousetrap@^1.6.2:
+  version "1.6.5"
+  resolved "https://registry.yarnpkg.com/mousetrap/-/mousetrap-1.6.5.tgz#8a766d8c272b08393d5f56074e0b5ec183485bf9"
+  integrity sha512-QNo4kEepaIBwiT8CDhP98umTetp+JNfQYBWvC1pc6/OAibuXtRcxZ58Qz8skvEHYvURne/7R8T5VoOI7rDsEUA==
+
 ms@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
@@ -7231,6 +7241,13 @@ react-error-overlay@^6.0.11:
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-6.0.11.tgz#92835de5841c5cf08ba00ddd2d677b6d17ff9adb"
   integrity sha512-/6UZ2qgEyH2aqzYZgQPxEnz33NJ2gNsnHA2o5+o4wW9bLM/JYQitNP9xPhsXwC08hMMovfGe/8retsdDsczPRg==
 
+react-hook-mousetrap@^2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/react-hook-mousetrap/-/react-hook-mousetrap-2.0.4.tgz#fd7a61306d852b6b03942deb21a2bce0b1b2af8c"
+  integrity sha512-T/TdV1BgfvCsvlz504CFc1bYHaOgnor61cA1c0OQHfsxNlTbBMtk+NPefeenavP7SGcxVNTRlNmq2T0On+Q+zg==
+  dependencies:
+    mousetrap "^1.6.2"
+
 react-is@^16.13.1, react-is@^16.7.0:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
@@ -7263,7 +7280,7 @@ react-refresh@^0.11.0:
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.11.0.tgz#77198b944733f0f1f1a90e791de4541f9f074046"
   integrity sha512-F27qZr8uUqwhWZboondsPx8tnC3Ct3SxZA3V5WyEvujRyyNv0VYPhoBg1gZ8/MV5tubQp76Trw8lTv9hzRBa+A==
 
-react-scripts@5.0.1:
+react-scripts@^5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/react-scripts/-/react-scripts-5.0.1.tgz#6285dbd65a8ba6e49ca8d651ce30645a6d980003"
   integrity sha512-8VAmEm/ZAwQzJ+GOMLbBsTdDKOpuZh7RPs0UymvBR2vRk4iZWCskjbFnxqjrzoIvlNNRZ3QJFx6/qDSi6zSnaQ==
