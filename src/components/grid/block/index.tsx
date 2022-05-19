@@ -1,4 +1,5 @@
 import React, { FC } from 'react'
+import { Container } from './styles'
 
 interface Props {
   colIndex: number
@@ -6,11 +7,8 @@ interface Props {
 }
 
 const Block: FC<Props> = ({ colIndex, rowIndex }) => {
-  return (
-    <div data-cy="block">
-      | {rowIndex} {colIndex} |
-    </div>
-  )
+  
+  return <Container data-cy={`block-${rowIndex}-${colIndex}`} />
 }
 
 export default Block
