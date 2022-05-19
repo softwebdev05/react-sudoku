@@ -1,6 +1,7 @@
 export * from './card'
 export { default as GlobalStyles } from './global'
 export { default as theme } from './theme'
+export { default as Grid } from './grid'
 export * from './styles'
 export * from './content'
 export * from './title'
