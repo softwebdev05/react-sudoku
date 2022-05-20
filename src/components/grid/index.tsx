@@ -7,6 +7,7 @@ import { BLOCK_COORDS, GRID, INDEX, N } from 'typings'
 import Block from './block'
 import { Container, Row } from './styles'
 interface State {
+  gameOver: boolean
   puzzleGrid?: GRID
   selectedBlock?: BLOCK_COORDS
   selectedValue: N
@@ -14,7 +15,8 @@ interface State {
 }
 
 const Grid: FC = () => {
-  const state = useSelector<Reducer, State>(({ puzzleGrid, selectedBlock, solvedGrid, workingGrid }) => ({
+  const state = useSelector<Reducer, State>(({ gameOver, puzzleGrid, selectedBlock, solvedGrid, workingGrid }) => ({
+    gameOver,
     puzzleGrid,
     selectedBlock,
     selectedValue: workingGrid && selectedBlock ? workingGrid[selectedBlock[0]][selectedBlock[1]] : 0,
@@ -26,6 +28,8 @@ const Grid: FC = () => {
 
   const fill = useCallback(
     (n: N) => {
+      if (state.gameOver) return
+
       if (
         state.selectedBlock &&
         state.puzzleGrid &&
@@ -34,7 +38,7 @@ const Grid: FC = () => {
         dispatch(fillBlock(state.selectedBlock, n))
       }
     },
-    [dispatch, state.selectedBlock, state.puzzleGrid]
+    [dispatch, state.gameOver, state.selectedBlock, state.puzzleGrid]
   )
 
   const moveDown = () => {
