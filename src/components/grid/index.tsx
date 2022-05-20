@@ -3,7 +3,7 @@ import useMousetrap from 'react-hook-mousetrap'
 import { useDispatch, useSelector } from 'react-redux'
 import { AnyAction } from 'redux'
 import { createGrid, fillBlock, Reducer, selectBlock } from 'reducers'
-import { BLOCK_COORDS, GRID, INDEX, N, NUMBERS } from 'typings'
+import { BLOCK_COORDS, GRID, INDEX, N } from 'typings'
 import Block from './block'
 import { Container, Row } from './styles'
 interface State {
