@@ -19,20 +19,19 @@ export interface Props {
   icon?: string
   title?: string
   description?: string
+  onDelete?: () => void
   position?: Position
   type: Type
 }
 
-const Notification: FC<Props> = ({ description, icon, position, title, type }) => {
-  if (!icon && type) {
+const Notification: FC<Props> = ({ description, icon, onDelete, position, title, type }) =>{  if (!icon && type) {
     icon = iconTypes[type]
   }
 
   return (
     <Container data-cy="toast-notification" position={position} className={position} type={type}>
-      <Button>X</Button>
-      <Image>
-        <img src={icon} alt="" />
+      <Button onClick={onDelete}>X</Button>      <Image>
+        <img src={icon} alt={type} />
       </Image>
       <Title>{title}</Title>
       <Message title={description}>{description}</Message>
