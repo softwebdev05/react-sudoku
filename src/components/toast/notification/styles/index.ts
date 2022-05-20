@@ -28,6 +28,7 @@ export const Container = styled.div<Props>`
     position: relative;
     transition: ${theme.transition};
     width: 365px;
+
     &:hover {
       box-shadow: 0 0 12px ${theme.colors.white};
       cursor: pointer;
@@ -59,6 +60,7 @@ export const Button = styled.button`
 export const Image = styled.div`
   float: left;
   margin-right: 15px;
+
   img {
     height: 30px;
     width: 30px;

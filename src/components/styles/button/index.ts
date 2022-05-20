@@ -29,6 +29,7 @@ export const Button = styled.button`
       background-color: ${theme.colors.blue};
       outline: none;
     }
+
     &:hover {
       opacity: 0.6;
     }

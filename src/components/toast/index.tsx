@@ -1,7 +1,9 @@
 import React, { Children, Dispatch, FC, useCallback } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+
 import { deleteNotification, Reducer } from 'reducers'
 import { AnyAction } from 'redux'
+
 import Notification from './notification'
 import { Container } from './styles'
 import { Position, ToastNotification } from './typings'
@@ -9,9 +11,11 @@ import { Position, ToastNotification } from './typings'
 interface Props {
   position?: Position
 }
+
 interface State {
   notifications: ToastNotification[]
 }
+
 const Toast: FC<Props> = ({ position }) => {
   const state = useSelector<Reducer, State>(({ notifications = [] }) => ({
     notifications,

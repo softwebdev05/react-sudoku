@@ -7,9 +7,9 @@ interface Props {
 }
 
 export const Container = styled.div<Props>`
-  ${({ active, line, puzzle, theme }) => css`    
+  ${({ active, line, puzzle, theme }) => css`
     align-items: center;
-    background-color: ${active ? theme.colors.blue : line ? theme.colors.lightBlue : theme.colors.white};    
+    background-color: ${active ? theme.colors.blue : line ? theme.colors.lightBlue : theme.colors.white};
     border: solid 1px ${theme.colors.black};
     cursor: pointer;
     display: flex;
@@ -22,11 +22,13 @@ export const Container = styled.div<Props>`
     justify-content: center;
     transition: ${theme.transition};
     user-select: none;
+
     &:before {
       padding-top: 100%;
       content: '';
       float: left;
     }
+
     &:hover {
       background-color: ${theme.colors.lightBlue};
     }

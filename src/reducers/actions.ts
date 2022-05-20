@@ -1,6 +1,7 @@
 import { ToastNotification } from 'components/toast/typings'
 import { Action, AnyAction } from 'redux'
 import { BLOCK_COORDS, N } from 'typings'
+
 import * as types from './types'
 
 export const createGrid = (): Action => ({ type: types.CREATE_GRID })

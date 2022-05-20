@@ -30,14 +30,13 @@ function fillGrid(grid: GRID) {
 
       if (checkGrid(grid) || fillGrid(grid)) return true
     }
-    
+
     break
   }
 
   grid[row][col] = 0
 
   return false
-
 }
 
 export default fillGrid

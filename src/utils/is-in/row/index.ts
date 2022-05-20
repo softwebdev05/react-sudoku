@@ -1,4 +1,5 @@
 import { GRID, INDEX, NUMBERS } from 'typings'
+
 interface Input {
   grid: GRID
   row: INDEX

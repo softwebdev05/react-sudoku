@@ -3,6 +3,7 @@ import styled, { keyframes } from 'styled-components'
 const toastInLeft = keyframes`
   from {
 		transform: translateX(-100%);
+
 	}
 	to {
 		transform: translateX(0);
@@ -12,6 +13,7 @@ const toastInLeft = keyframes`
 const toastInRight = keyframes`
   from {
 	  transform: translateX(100%);
+
 	}
 	to {
 	  transform: translateX(0);
@@ -23,6 +25,7 @@ export const Container = styled.div`
   box-sizing: border-box;
   position: fixed;
   z-index: 999999;
+
   &.top-right,
   .top-right {
     top: 12px;
@@ -30,6 +33,7 @@ export const Container = styled.div`
     transition: transform 0.6s ease-in-out;
     animation: ${toastInRight} 0.7s;
   }
+
   &.bottom-right,
   .bottom-right {
     bottom: 12px;
@@ -37,6 +41,7 @@ export const Container = styled.div`
     transition: transform 0.6s ease-in-out;
     animation: ${toastInRight} 0.7s;
   }
+
   &.top-left,
   .top-left {
     top: 12px;
@@ -44,6 +49,7 @@ export const Container = styled.div`
     transition: transform 0.6s ease-in;
     animation: ${toastInLeft} 0.7s;
   }
+
   &.bottom-left,
   .bottom-left {
     bottom: 12px;

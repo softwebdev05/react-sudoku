@@ -1,4 +1,4 @@
-import shuffle  from './'
+import shuffle from './'
 
 describe('suffle', () => {
   it('returns an array with the same length as the array being shuffled', () => {

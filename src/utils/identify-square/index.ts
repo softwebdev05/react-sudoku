@@ -17,7 +17,6 @@ function identifyWorkingSquare({ col, grid, row }: Input): SQUARE {
   const rowStart = Math.floor(row / 3) * 3
 
   for (let y = rowStart; y < rowStart + 3; y++) {
-    
     square.push([grid[y][colStart], grid[y][colStart + 1], grid[y][colStart + 2]])
   }
 

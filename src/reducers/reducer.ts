@@ -1,5 +1,7 @@
 import { AnyAction } from 'redux'
+
 import { checkGrid, compareArrays, copyGrid, createFullGrid, removeNumbers } from 'utils'
+
 import { Reducer } from './interfaces'
 import * as types from './types'
 
@@ -15,7 +17,6 @@ function reducer(state = initialState, action: AnyAction): Reducer {
       removeNumbers(puzzleGrid)
       const workingGrid = copyGrid(puzzleGrid)
 
-
       return {
         ...state,
         gameOver: false,
@@ -25,7 +26,7 @@ function reducer(state = initialState, action: AnyAction): Reducer {
         workingGrid,
       }
 
-      case types.CREATE_NOTIFICATION:
+    case types.CREATE_NOTIFICATION:
       return {
         ...state,
         notifications: [...(state.notifications || []), action.notification],
@@ -71,15 +72,15 @@ function reducer(state = initialState, action: AnyAction): Reducer {
         ...state,
         gameOver: gameOver,
         notifications: [...notifications],
+        workingGrid: [...state.workingGrid],
       }
 
-      
-      case types.SELECT_BLOCK:
+    case types.SELECT_BLOCK:
       return {
         ...state,
         selectedBlock: action.coords,
       }
-      
+
     default:
       return state
   }

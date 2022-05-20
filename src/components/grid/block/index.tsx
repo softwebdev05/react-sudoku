@@ -1,7 +1,8 @@
 import React, { Dispatch, FC } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { AnyAction } from 'redux'
-import { Reducer, selectBlock  } from 'reducers'
+
+import { Reducer, selectBlock } from 'reducers'
 import { INDEX, N } from 'typings'
 import { Container } from './styles'
 
@@ -18,7 +19,6 @@ interface State {
 }
 
 const Block: FC<Props> = ({ colIndex, rowIndex }) => {
-  
   const state = useSelector<Reducer, State>(({ puzzleGrid, selectedBlock, workingGrid }) => ({
     isActive: selectedBlock ? selectedBlock[0] === rowIndex && selectedBlock[1] === colIndex : false,
     isInLine: selectedBlock ? colIndex === selectedBlock[1] || rowIndex === selectedBlock[0] : false,
@@ -29,10 +29,8 @@ const Block: FC<Props> = ({ colIndex, rowIndex }) => {
   const dispatch = useDispatch<Dispatch<AnyAction>>()
 
   const handleClick = () => {
-    if (!state.isActive && !state.isPuzzle) dispatch(selectBlock([rowIndex, colIndex]))  
+    if (!state.isActive && !state.isPuzzle) dispatch(selectBlock([rowIndex, colIndex]))
   }
-
-
 
   return (
     <Container
@@ -41,7 +39,7 @@ const Block: FC<Props> = ({ colIndex, rowIndex }) => {
       onClick={handleClick}
       puzzle={state.isPuzzle}
       line={state.isInLine}
-    >      
+    >
       {state.value || ''}
     </Container>
   )
