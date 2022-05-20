@@ -1,5 +1,5 @@
 import { AnyAction } from 'redux'
-import { checkGrid, compareArrays, copyGrid, createFullGrid, removeNumbers } from 'utils'
+import { compareArrays, copyGrid, createFullGrid, removeNumbers } from 'utils'
 import { Reducer } from './interfaces'
 import * as types from './types'
 
