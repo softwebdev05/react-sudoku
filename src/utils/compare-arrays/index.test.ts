@@ -2,6 +2,8 @@ import compareArrays from './'
 
 describe('compareArrays', () => {
   it('returns true if arrays are identical', () => {
+    expect(compareArrays([1, 2, 4], [1, 2, 3])).toBeFalsy()
+    
     expect(compareArrays([1, 2, 3, 4], [1, 2, 3, 4])).toBeTruthy()
 
     expect(compareArrays([1, '2', 3, '4'], [1, '2', 3, '4'])).toBeTruthy()
