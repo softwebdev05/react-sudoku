@@ -4,7 +4,7 @@ import { Provider } from 'react-redux'
 import { ThemeProvider } from 'styled-components'
 import { PersistGate } from 'redux-persist/integration/react'
 import { GlobalStyles, theme } from 'styles'
-import { Card, Content, Grid, NewButton, Numbers, Title } from 'components'
+import { Card, Content, Grid, NewButton, Numbers, Title, Toast } from 'components'
 import { configureStore } from 'core'
 
 const { store, persistor } = configureStore()
@@ -22,6 +22,7 @@ ReactDOM.render(
             <Numbers />
           </Card>
         </Content>
+        <Toast />
       </PersistGate>
     </Provider>
   </ThemeProvider>,
