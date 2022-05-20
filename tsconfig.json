@@ -17,5 +17,5 @@
     "jsx": "react-jsx",
     "baseUrl": "src"
   },
-  "include": ["src", "styles", "typings"]
+  "include": ["src", "styles", "src/typings"]
 }
