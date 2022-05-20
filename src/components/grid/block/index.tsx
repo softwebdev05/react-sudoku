@@ -12,6 +12,7 @@ interface Props {
 
 interface State {
   isActive: boolean
+  isInLine: boolean
   isPuzzle: boolean
   value: N
 }
@@ -19,9 +20,8 @@ interface State {
 const Block: FC<Props> = ({ colIndex, rowIndex }) => {
   
   const state = useSelector<Reducer, State>(({ puzzleGrid, selectedBlock, workingGrid }) => ({
-    isActive: selectedBlock
-      ? selectedBlock[0] === rowIndex && selectedBlock[1] === colIndex
-      : false,
+    isActive: selectedBlock ? selectedBlock[0] === rowIndex && selectedBlock[1] === colIndex : false,
+    isInLine: selectedBlock ? colIndex === selectedBlock[1] || rowIndex === selectedBlock[0] : false,
     isPuzzle: puzzleGrid ? puzzleGrid[rowIndex][colIndex] !== 0 : false,
     value: workingGrid ? workingGrid[rowIndex][colIndex] : 0,
   }))
@@ -40,6 +40,7 @@ const Block: FC<Props> = ({ colIndex, rowIndex }) => {
       data-cy={`block-${rowIndex}-${colIndex}`}
       onClick={handleClick}
       puzzle={state.isPuzzle}
+      line={state.isInLine}
     >      
       {state.value || ''}
     </Container>
